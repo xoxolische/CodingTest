@@ -1,6 +1,7 @@
 function onClickCreate() {
 	
-	var item = {			
+	var item = {	
+			
 			customer: $("#customer").val(),
 			ccyPair: $("#ccyPair").val(),
 			type: $("#type").val(),
@@ -14,6 +15,7 @@ function onClickCreate() {
 			trader: $("#trader").val()			
 			
 			/*
+			
 			customer:"PLUTO1",
 			ccyPair:"EURUSD",
 			type:"Spot",
@@ -29,7 +31,7 @@ function onClickCreate() {
 			
 	    };
 	$.ajax({
-        url: "/codingtest/create",
+        url: "create",
         method: 'POST',
         data: JSON.stringify(item),
         contentType: "application/json",
@@ -38,6 +40,7 @@ function onClickCreate() {
     	$('html, body').animate({ scrollTop: 0 }, 'fast');
     	$("#submitCollector").fadeIn("slow", function () {
     		$("#submitCollector").html(data.entity);
+    		//$("#submitCollector").html(data.entityType);
     		console.log(data);
     	});
 	})

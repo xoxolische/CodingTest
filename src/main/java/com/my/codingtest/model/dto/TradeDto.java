@@ -9,7 +9,7 @@ public class TradeDto {
 	
 	private String customer;
 	
-	private CCYPair ccyPair;
+	private String ccyPair;
 	
 	private String type;
 	
@@ -37,11 +37,11 @@ public class TradeDto {
 		this.customer = customer;
 	}
 
-	public CCYPair getCcyPair() {
+	public String getCcyPair() {
 		return ccyPair;
 	}
 
-	public void setCcyPair(CCYPair ccyPair) {
+	public void setCcyPair(String ccyPair) {
 		this.ccyPair = ccyPair;
 	}
 
